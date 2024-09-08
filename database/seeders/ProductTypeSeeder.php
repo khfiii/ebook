@@ -18,7 +18,6 @@ class ProductTypeSeeder extends Seeder
         foreach($productTypeList->getCases() as $productType){
             \App\Models\ProductType::create([
                 'name' => $productType->getvalue()->value,
-                'type' => 'pages'
             ]);
         }
     }
