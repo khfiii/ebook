@@ -1,3 +1,3 @@
 import './bootstrap';
-import './payment';
+// import './payment';
 // import './alpine';

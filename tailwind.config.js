@@ -13,9 +13,10 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                poppins: ['Poppins', 'sans-serif'],
             },
         },
     },
 
-    plugins: [forms, require('daisyui'),],
+    plugins: [forms, require('daisyui'), require('@tailwindcss/typography'),],
 };

@@ -1,6 +1,6 @@
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-8 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
@@ -12,11 +12,11 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('home')" :active="request()->routeIs('home')" wire:navigate>
-                        {{ __('Ebooks') }}
+                    <x-nav-link :href="route('product')" :active="request()->routeIs('product')" wire:navigate>
+                        {{ __('Products') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('template')" :active="request()->routeIs('template')" wire:navigate>
-                        {{ __('Templates') }}
+                    <x-nav-link :href="route('blog')" :active="request()->routeIs('blog')" wire:navigate>
+                        {{ __('Blogs') }}
                     </x-nav-link>
                     <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')" wire:navigate>
                         {{ __('Contact') }}
@@ -39,13 +39,15 @@
 
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
-        <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('home')" wire:navigate>
-                {{ __('Ebooks') }}
+        <div class="pt-2 pb-3 space-y-1 px-5">
+            <x-responsive-nav-link :href="route('product')" :active="request()->routeIs('product')" wire:navigate>
+                {{ __('Products') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('template')" :active="request()->routeIs('template')" wire:navigate>
-                {{ __('Templates') }}
+            
+            <x-responsive-nav-link :href="route('blog')" :active="request()->routeIs('blog')" wire:navigate>
+                {{ __('Blogs') }}
             </x-responsive-nav-link>
+
             <x-responsive-nav-link :href="route('contact')" :active="request()->routeIs('contact')" wire:navigate>
                 {{ __('Contact') }}
             </x-responsive-nav-link>

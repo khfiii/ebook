@@ -55,6 +55,7 @@ class ProductResource extends Resource
                ->columns(2)
                ->schema([
                 SpatieMediaLibraryFileUpload::make('cover')
+                ->disk('file')
                 ->collection(function(Get $get){
                     return str(ProductType::find($get('product_type_id'))->name)->append('-cover'); 
                 })
